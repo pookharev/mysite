@@ -1,10 +1,26 @@
 {% extends "mainApp/wrapper.html" %}
 
+
 {% block content %}
-<h2>hello jinja</h2>
+<div class="container-fluid">
 
-{% include "mainApp/page_html.html" %}
+	<div class="row">
+		<div class="col">
+			{% include "mainApp/includes/hello_bt.html" %}
+		</div>
+	</div>
 
-{% include "mainApp/includes/includeOne.html" %}
+	<div class="row">
+		<div class="col">
+			{% include "mainApp/includes/includeOne.html" %}
+		</div>
+	</div>
 
+	<div class="row">
+		<div class="col">
+			{% include "mainApp/includes/page_html.html" %}
+		</div>
+	</div>
+
+</div>
 {% endblock %}

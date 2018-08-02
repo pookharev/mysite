@@ -16,7 +16,16 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+"""
+Вызываем вьюху напрямую из mainApp-приложения не используя при этом
+url самого приложения(mainApp.urls.py).
+"""
+from mainApp import views as mainApp_views
+from mainApp import views as mainApp_views_sing_in
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('mainApp.urls')),
+    url(r'^contact/', mainApp_views.contact),
+    url(r'^sing_in/', mainApp_views_sing_in.sing_in),
 ]
